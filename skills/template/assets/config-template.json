@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "my-skill-config",
+  "version": "1.0.0",
+  "description": "Template configuration file for the skill",
+  "settings": {
+    "option1": "default-value",
+    "option2": false,
+    "option3": 10
+  },
+  "metadata": {
+    "author": "Your Name",
+    "created": "2024-01-01",
+    "tags": ["template", "example"]
+  }
+}

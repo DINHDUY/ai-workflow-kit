@@ -1,0 +1,44 @@
+{
+  "name": "ai-workflow-kit",
+  "version": "1.0.0",
+  "description": "Scaffold AI agent assets (skills, commands, workflows) into your project",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "bin": {
+    "add-skills": "./dist/ai-workflow-kit/cli.js",
+    "add-commands": "./dist/ai-workflow-kit/cli.js",
+    "add-workflows": "./dist/ai-workflow-kit/cli.js"
+  },
+  "files": [
+    "dist/",
+    "skills/",
+    "commands/",
+    "workflows/"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsx src/ai-workflow-kit/cli.ts",
+    "test": "node --import tsx --test 'src/ai-workflow-kit/__tests__/**/*.test.ts'",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "workflow",
+    "scaffold",
+    "cli",
+    "cursor"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.0",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0"
+  }
+}
