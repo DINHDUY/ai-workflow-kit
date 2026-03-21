@@ -7,6 +7,7 @@
     "node": ">=22.0.0"
   },
   "bin": {
+    "ai-workflow-kit": "./dist/ai-workflow-kit/cli.js",
     "add-skills": "./dist/ai-workflow-kit/cli.js",
     "add-commands": "./dist/ai-workflow-kit/cli.js",
     "add-workflows": "./dist/ai-workflow-kit/cli.js"
@@ -18,6 +19,7 @@
     "workflows/"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsc --project tsconfig.json",
     "dev": "tsx src/ai-workflow-kit/cli.ts",
     "test": "node --import tsx --test 'src/ai-workflow-kit/__tests__/**/*.test.ts'",
