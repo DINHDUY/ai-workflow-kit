@@ -1,5 +1,5 @@
 {
-  "name": "ai-workflow-kit",
+  "name": "@dtranllc/ai-workflow-kit",
   "version": "1.0.0",
   "description": "Scaffold AI agent assets (skills, commands, workflows) into your project",
   "type": "module",
@@ -34,6 +34,18 @@
     "cursor"
   ],
   "license": "MIT",
+  "author": "Dinhduy Tran<dinhduy@dtranllc.com> (https://github.com/DINHDUY)",
+  "homepage": "https://github.com/DINHDUY/ai-workflow-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DINHDUY/ai-workflow-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DINHDUY/ai-workflow-kit/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "chalk": "^5.4.0",
     "commander": "^12.0.0"

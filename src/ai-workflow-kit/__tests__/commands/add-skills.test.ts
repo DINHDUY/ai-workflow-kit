@@ -35,16 +35,16 @@ describe('add-skills command', () => {
 
   it('should copy skill files to default output directory', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const result = runCli(['add-skills', 'TEMPLATE', '--output', path.join(tmpDir, 'skills')], tmpDir);
+    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills')], tmpDir);
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
-    assert.ok(existsSync(path.join(tmpDir, 'skills', 'TEMPLATE', 'SKILL.md')));
-    assert.ok(existsSync(path.join(tmpDir, 'skills', 'TEMPLATE', 'README.md')));
+    assert.ok(existsSync(path.join(tmpDir, 'skills', 'template', 'SKILL.md')));
+    assert.ok(existsSync(path.join(tmpDir, 'skills', 'template', 'README.md')));
   });
 
   it('should copy scripts/ to project root scripts/', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const result = runCli(['add-skills', 'TEMPLATE', '--output', path.join(tmpDir, 'skills')], tmpDir);
+    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills')], tmpDir);
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
     assert.ok(existsSync(path.join(tmpDir, 'scripts', 'example.sh')));
@@ -53,20 +53,20 @@ describe('add-skills command', () => {
 
   it('should print planned operations in dry-run mode without creating files', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const result = runCli(['add-skills', 'TEMPLATE', '--output', path.join(tmpDir, 'skills'), '--dry-run'], tmpDir);
+    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills'), '--dry-run'], tmpDir);
 
     assert.equal(result.exitCode, 0);
     assert.ok(result.stdout.includes('Dry run'));
-    assert.ok(!existsSync(path.join(tmpDir, 'skills', 'TEMPLATE')));
+    assert.ok(!existsSync(path.join(tmpDir, 'skills', 'template')));
   });
 
   it('should overwrite existing files with --force', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const destDir = path.join(tmpDir, 'skills', 'TEMPLATE');
+    const destDir = path.join(tmpDir, 'skills', 'template');
     mkdirSync(destDir, { recursive: true });
     writeFileSync(path.join(destDir, 'SKILL.md'), 'old');
 
-    const result = runCli(['add-skills', 'TEMPLATE', '--output', path.join(tmpDir, 'skills'), '--force'], tmpDir);
+    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills'), '--force'], tmpDir);
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
     const content = readFileSync(path.join(destDir, 'SKILL.md'), 'utf8');
@@ -75,11 +75,11 @@ describe('add-skills command', () => {
 
   it('should detect conflicts without --force and exit 1', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const destDir = path.join(tmpDir, 'skills', 'TEMPLATE');
+    const destDir = path.join(tmpDir, 'skills', 'template');
     mkdirSync(destDir, { recursive: true });
     writeFileSync(path.join(destDir, 'SKILL.md'), 'old');
 
-    const result = runCli(['add-skills', 'TEMPLATE', '--output', path.join(tmpDir, 'skills')], tmpDir);
+    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills')], tmpDir);
 
     assert.notEqual(result.exitCode, 0);
     const output = result.stdout + result.stderr;
@@ -93,15 +93,15 @@ describe('add-skills command', () => {
     assert.notEqual(result.exitCode, 0);
     const output = result.stdout + result.stderr;
     assert.ok(output.includes('not found'));
-    assert.ok(output.includes('TEMPLATE'));
+    assert.ok(output.includes('template'));
   });
 
   it('should copy to custom output directory with --output', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
     const customOut = path.join(tmpDir, 'my-custom-skills');
-    const result = runCli(['add-skills', 'TEMPLATE', '--output', customOut], tmpDir);
+    const result = runCli(['add-skills', 'template', '--output', customOut], tmpDir);
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
-    assert.ok(existsSync(path.join(customOut, 'TEMPLATE', 'SKILL.md')));
+    assert.ok(existsSync(path.join(customOut, 'template', 'SKILL.md')));
   });
 });

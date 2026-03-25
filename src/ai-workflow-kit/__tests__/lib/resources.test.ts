@@ -48,7 +48,7 @@ describe('getAvailableSkills', () => {
 
   it('should include known skill names', () => {
     const skills = getAvailableSkills();
-    assert.ok(skills.includes('TEMPLATE'));
+    assert.ok(skills.includes('template'));
   });
 });
 

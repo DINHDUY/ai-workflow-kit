@@ -12,17 +12,17 @@ This delivers **clean code** (DRY, single-responsibility, meaningful naming), **
 
 Here are the core diagrams that guide the structure:
 
-![alt text](image.png)
+![alt text](assets/image.png)
 
 **FSD Layers** (outer = app-level → inner = shared/domain). Slices = business features (e.g., “user-auth”). Segments = ui / model / api / lib. Strict import rules prevent spaghetti.
 
 **Bulletproof React / Feature-Based Practical Structure** (colocated per feature):
 
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 
 **Clean Architecture Layers** (concentric, dependencies point inward):
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 ### Step-by-Step Workflow (Incremental & Safe)
 
