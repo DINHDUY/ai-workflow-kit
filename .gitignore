@@ -13,3 +13,7 @@ Thumbs.db
 
 .env
 .env.*
+
+
+.claude/agents/
+docs/workflows/

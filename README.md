@@ -1,6 +1,21 @@
 # @dtranllc/ai-workflow-kit
 
-Scaffold AI agent skills, commands, and workflows into your project with a single command.
+Scaffold AI agent workflows into your project with a single command.
+
+## What is this?
+
+**ai-workflow-kit** is a collection of production-ready multi-agent workflow systems that you can instantly add to your project. Each workflow is a coordinated team of specialized AI agents that work together to automate complex development tasks—from researching and planning to implementation and optimization.
+
+The **`builder` workflow** is the centerpiece: it automates the creation of *new* multi-agent workflows. Point it at any professional domain, and it will research best practices, design the agent decomposition, generate all agent definition files, and produce comprehensive documentation—ready to use in Cursor, Claude Code, or GitHub Copilot.
+
+## Who is this for?
+
+- **AI-native developers** building with Cursor, Claude Code, or GitHub Copilot agents
+- **Teams** standardizing on multi-agent workflows for complex tasks
+- **DevOps & Platform Engineers** automating domain-specific pipelines
+- **Tech Leads** creating reusable agent patterns for their organization
+
+Whether you're building web apps with the `nextjs` workflow, optimizing performance with `perf`, or creating your own custom workflows with `builder`, this kit gives you battle-tested agent systems instead of starting from scratch.
 
 ## Install
 
@@ -24,33 +39,7 @@ Replace `user` with the repository owner.
 
 Requires Node.js 22 or later.
 
-## Commands
-
-All three commands share the same options:
-
-| Option | Default | Description |
-|--------|---------|-------------|
-| `-o, --output <path>` | *(per command)* | Output directory |
-| `-f, --force` | `false` | Overwrite existing files |
-| `--dry-run` | `false` | Preview without writing |
-
-### `add-skills`
-
-Copy a skill template into your project. The `scripts/` subdirectory inside the bundle is copied to the project root `scripts/` directory.
-
-```bash
-npx @dtranllc/ai-workflow-kit add-skills <skillName> --output ./skills
-```
-
-### `add-commands`
-
-Copy an AI-agent command (`.md` file + optional scripts) into your project.
-
-```bash
-npx @dtranllc/ai-workflow-kit add-commands <commandName> --output .cursor/commands
-```
-
-### `add-workflows`
+## Usage
 
 Copy a multi-agent workflow into your project. Agent definition files are placed flat in the output directory; all other files go to `docs/workflows/<name>/`.
 
@@ -58,38 +47,28 @@ Copy a multi-agent workflow into your project. Agent definition files are placed
 npx @dtranllc/ai-workflow-kit add-workflows <workflowName> --output .cursor/agents
 ```
 
-## Available Resources
+### Options
 
-### Skills
+| Option | Default | Description |
+|--------|---------|-------------|
+| `-o, --output <path>` | `.cursor/agents` | Output directory for agent files |
+| `-f, --force` | `false` | Overwrite existing files |
+| `--dry-run` | `false` | Preview without writing |
 
-| Name | Description |
-|------|-------------|
-| `abc` | Minimal example skill |
-| `auditing-agent-skill` | Security-audit an agent skill for vulnerabilities |
-| `creating-new-skill` | Guide for authoring new skills |
-| `reviewing-agent-skill` | Code-review an agent skill against a checklist |
-| `submitting-pr` | Submit a pull request following Commitizen conventions |
-| `template` | Full skill template with scripts, references, and assets |
+## Available Workflows
 
-### Commands
+**Start here:** The **`builder`** workflow automates the creation of new multi-agent workflows for any professional domain.
 
-| Name | Description |
-|------|-------------|
-| `abc` | Minimal example command |
-| `docx-to-markdown` | Convert a Word `.docx` file to GitHub Flavored Markdown |
-| `markdown-to-outlook-html` | Convert Markdown to Outlook-safe inline-styled HTML |
-| `template` | Full command template with scripts, examples, and references |
-
-### Workflows
-
-| Name | Description |
-|------|-------------|
-| `builder` | Multi-agent workflow builder with pattern references |
-| `maf` | Port Claude/Cursor/Copilot agents to Microsoft Agent Framework |
-| `nextjs` | Full-stack Next.js app scaffolding and implementation |
-| `prodify` | Production-readiness workflow |
-| `scrapy` | Scrapy web-scraping pipeline workflow |
-| `speckit` | Specification and planning workflow |
+| Name | Description | Docs |
+|------|-------------|------|
+| **`builder`** | **Multi-agent workflow builder with pattern references** ⭐ | [README](workflows/builder/README.md) |
+| `claude-packager` | Generate a complete, production-ready Python package wrapping agents into an Anthropic Claude SDK multi-agent application | [README](workflows/claude-packager/README.md) |
+| `maf-packager` | Generate a complete, production-ready Python package wrapping agents into a Microsoft Agent Framework (MAF) multi-agent application | [README](workflows/maf-packager/README.md) |
+| `nextjs` | Automate the conversion of UI designs into production-ready Next.js 15+ enterprise React applications | [README](workflows/nextjs/README.md) |
+| `perf` | Performance-first code generation with TDD and benchmarking | [README](workflows/perf/README.md) |
+| `prodify` | Transform React prototypes into enterprise production-grade applications | [README](workflows/prodify/README.md) |
+| `scrapy` | Automate creation of production-grade Scrapy web scraping projects | [README](workflows/scrapy/README.md) |
+| `speckit` | Automate spec-driven development from initial concept to full implementation | [README](workflows/speckit/README.md) |
 
 ## Development
 
