@@ -30,7 +30,7 @@ function executeAddSkills(name: string, opts: CommandOptions): void {
   const available = getAvailableSkills();
   if (!available.includes(name)) {
     console.error(
-      chalk.red(`Skill '${name}' not found. Available skills: ${available.join(', ')}`)
+      chalk.red(`Skill '${name}' not found. Available skills: ${available.join(', ')}`),
     );
     process.exitCode = 1;
     return;
@@ -54,9 +54,7 @@ function executeAddSkills(name: string, opts: CommandOptions): void {
 
   if (existsSync(dstDir) && !opts.force) {
     console.error(
-      chalk.red(
-        `Destination already exists: ${rel(dstDir)}. Use --force to overwrite.`
-      )
+      chalk.red(`Destination already exists: ${rel(dstDir)}. Use --force to overwrite.`),
     );
     process.exitCode = 1;
     return;

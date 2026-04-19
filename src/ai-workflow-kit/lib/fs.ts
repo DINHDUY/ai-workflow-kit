@@ -2,13 +2,7 @@ import { mkdirSync, readdirSync, copyFileSync } from 'node:fs';
 import * as path from 'node:path';
 
 /** Directory names excluded from recursive copy operations. */
-export const SKIP_DIRS = new Set([
-  '__pycache__',
-  '.git',
-  'node_modules',
-  'dist',
-  '.turbo',
-]);
+export const SKIP_DIRS = new Set(['__pycache__', '.git', 'node_modules', 'dist', '.turbo']);
 
 /** Recursively copy a directory tree, returning absolute paths of written files. */
 export function copyTree(src: string, dst: string): string[] {

@@ -19,9 +19,7 @@ export function getResourceDir(name: string): string {
   const devDir = path.resolve(__dirname, '..', '..', '..', name);
   if (existsSync(devDir)) return devDir;
 
-  throw new Error(
-    `Resource directory '${name}' not found. Package may be corrupted.`
-  );
+  throw new Error(`Resource directory '${name}' not found. Package may be corrupted.`);
 }
 
 /** Return sorted names of available skill directories. */

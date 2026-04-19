@@ -9,17 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `maf` workflow: Microsoft Agent Framework port workflow with 7 specialized agents
-  (`maf.environment-setup`, `maf.parser`, `maf.tool-mapper`, `maf.agent-builder`,
-  `maf.orchestrator`, `maf.runner`, `maf.productionizer`)
-- `src/maf/` Python implementation: `parser.py`, `agents.py`, `tools.py`, `workflow.py`,
-  `client.py`, `main.py` for running MAF pipelines locally with Azure OpenAI
 - `.github/agents/` workflow builder agents: `workflow.builder`, `workflow.documenter`,
   `workflow.orchestrator`, `workflow.planner`, `workflow.researcher`
-- `workflows/maf/maf-spec.md` reference document for porting Claude/Cursor/Copilot agents to MAF
 - `LICENSE` file (MIT)
-- Scoped package name `@dtranllc/ai-workflow-kit`
-- `publishConfig.access: "public"` for automatic public scoped publish
 - `author`, `homepage`, `repository`, and `bugs` fields in `package.json`
 
 ## [1.0.0] - 2026-03-01

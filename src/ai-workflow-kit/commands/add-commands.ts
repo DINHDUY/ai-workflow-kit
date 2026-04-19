@@ -10,9 +10,7 @@ import type { CommandOptions } from '../lib/types.js';
 export function findCommandMd(bundlePath: string, commandName: string): string {
   const mdFile = path.join(bundlePath, `${commandName}.md`);
   if (!existsSync(mdFile)) {
-    throw new Error(
-      `No '${commandName}.md' found in command bundle at ${bundlePath}.`
-    );
+    throw new Error(`No '${commandName}.md' found in command bundle at ${bundlePath}.`);
   }
   return mdFile;
 }
@@ -41,7 +39,7 @@ function executeAddCommands(name: string, opts: CommandOptions): void {
   const available = getAvailableCommands();
   if (!available.includes(name)) {
     console.error(
-      chalk.red(`Command '${name}' not found. Available commands: ${available.join(', ')}`)
+      chalk.red(`Command '${name}' not found. Available commands: ${available.join(', ')}`),
     );
     process.exitCode = 1;
     return;
@@ -66,9 +64,7 @@ function executeAddCommands(name: string, opts: CommandOptions): void {
 
   if (existsSync(mdDst) && !opts.force) {
     console.error(
-      chalk.red(
-        `Destination already exists: ${rel(mdDst)}. Use --force to overwrite.`
-      )
+      chalk.red(`Destination already exists: ${rel(mdDst)}. Use --force to overwrite.`),
     );
     process.exitCode = 1;
     return;
