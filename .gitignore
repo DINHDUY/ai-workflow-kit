@@ -15,5 +15,6 @@ Thumbs.db
 .env.*
 
 
-.claude/agents/
+.claude/
+.cursor/
 docs/workflows/

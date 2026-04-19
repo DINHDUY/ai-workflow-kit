@@ -1,6 +1,6 @@
 {
   "name": "@dtranllc/ai-workflow-kit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Scaffold AI agent assets (skills, commands, workflows) into your project",
   "type": "module",
   "engines": {
@@ -12,18 +12,33 @@
     "add-commands": "./dist/ai-workflow-kit/cli.js",
     "add-workflows": "./dist/ai-workflow-kit/cli.js"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/ai-workflow-kit/cli.js",
+      "types": "./dist/ai-workflow-kit/cli.d.ts"
+    }
+  },
   "files": [
     "dist/",
     "skills/",
     "commands/",
-    "workflows/"
+    "workflows/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "scripts": {
+    "prepack": "find . -not -path '*/node_modules/*' -name '__pycache__' -type d -exec rm -rf {} + 2>/dev/null || true",
     "prepare": "npm run build",
     "build": "tsc --project tsconfig.json",
     "dev": "tsx src/ai-workflow-kit/cli.ts",
     "test": "node --import tsx --test 'src/ai-workflow-kit/__tests__/**/*.test.ts'",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "release": "semantic-release"
   },
   "keywords": [
     "ai",
@@ -51,8 +66,22 @@
     "commander": "^12.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.5",
+    "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3",
+    "semantic-release": "^25.0.3",
     "tsx": "^4.0.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^8.58.2"
   }
 }

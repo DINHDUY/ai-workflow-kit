@@ -32,7 +32,7 @@ describe('getResourceDir', () => {
         assert.ok(err.message.includes('nonexistent-resource-xyz'));
         assert.ok(err.message.includes('not found'));
         return true;
-      }
+      },
     );
   });
 });
@@ -63,7 +63,7 @@ describe('getAvailableCommands', () => {
 
   it('should include known command names', () => {
     const commands = getAvailableCommands();
-    assert.ok(commands.includes('abc'));
+    assert.ok(commands.includes('template'));
   });
 });
 

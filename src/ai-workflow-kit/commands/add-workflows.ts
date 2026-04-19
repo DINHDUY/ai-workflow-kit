@@ -31,7 +31,7 @@ function executeAddWorkflows(name: string, opts: CommandOptions): void {
   const available = getAvailableWorkflows();
   if (!available.includes(name)) {
     console.error(
-      chalk.red(`Workflow '${name}' not found. Available workflows: ${available.join(', ')}`)
+      chalk.red(`Workflow '${name}' not found. Available workflows: ${available.join(', ')}`),
     );
     process.exitCode = 1;
     return;
@@ -94,7 +94,7 @@ function collectConflicts(
   srcDir: string,
   agentsDst: string,
   docsDir: string,
-  hasAgents: boolean
+  hasAgents: boolean,
 ): string[] {
   const conflicts: string[] = [];
   if (hasAgents) {

@@ -31,9 +31,9 @@ function runCli(args: string[], cwd: string): { stdout: string; stderr: string; 
 describe('findCommandMd', () => {
   it('should locate the .md file inside a command bundle', () => {
     const commandsRoot = getResourceDir('commands');
-    const bundlePath = path.join(commandsRoot, 'abc');
-    const mdPath = findCommandMd(bundlePath, 'abc');
-    assert.ok(mdPath.endsWith('abc.md'));
+    const bundlePath = path.join(commandsRoot, 'template');
+    const mdPath = findCommandMd(bundlePath, 'template');
+    assert.ok(mdPath.endsWith('template.md'));
     assert.ok(existsSync(mdPath));
   });
 
@@ -48,7 +48,7 @@ describe('findCommandMd', () => {
           assert.ok(err instanceof Error);
           assert.ok(err.message.includes('empty-cmd.md'));
           return true;
-        }
+        },
       );
     } finally {
       if (tmpDir) rmSync(tmpDir, { recursive: true, force: true });
@@ -66,10 +66,10 @@ describe('add-commands command', () => {
   it('should copy .md file to default output directory', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addcmds-'));
     const outDir = path.join(tmpDir, '.cursor', 'commands');
-    const result = runCli(['add-commands', 'abc', '--output', outDir], tmpDir);
+    const result = runCli(['add-commands', 'template', '--output', outDir], tmpDir);
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
-    assert.ok(existsSync(path.join(outDir, 'abc.md')));
+    assert.ok(existsSync(path.join(outDir, 'template.md')));
   });
 
   it('should copy scripts/ to project root scripts/', () => {
@@ -84,23 +84,23 @@ describe('add-commands command', () => {
   it('should print planned operations in dry-run mode without creating files', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addcmds-'));
     const outDir = path.join(tmpDir, '.cursor', 'commands');
-    const result = runCli(['add-commands', 'abc', '--output', outDir, '--dry-run'], tmpDir);
+    const result = runCli(['add-commands', 'template', '--output', outDir, '--dry-run'], tmpDir);
 
     assert.equal(result.exitCode, 0);
     assert.ok(result.stdout.includes('Dry run'));
-    assert.ok(!existsSync(path.join(outDir, 'abc.md')));
+    assert.ok(!existsSync(path.join(outDir, 'template.md')));
   });
 
   it('should overwrite existing .md with --force', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addcmds-'));
     const outDir = path.join(tmpDir, '.cursor', 'commands');
     mkdirSync(outDir, { recursive: true });
-    writeFileSync(path.join(outDir, 'abc.md'), 'old');
+    writeFileSync(path.join(outDir, 'template.md'), 'old');
 
-    const result = runCli(['add-commands', 'abc', '--output', outDir, '--force'], tmpDir);
+    const result = runCli(['add-commands', 'template', '--output', outDir, '--force'], tmpDir);
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
-    const content = readFileSync(path.join(outDir, 'abc.md'), 'utf8');
+    const content = readFileSync(path.join(outDir, 'template.md'), 'utf8');
     assert.notEqual(content, 'old');
   });
 
@@ -108,9 +108,9 @@ describe('add-commands command', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addcmds-'));
     const outDir = path.join(tmpDir, '.cursor', 'commands');
     mkdirSync(outDir, { recursive: true });
-    writeFileSync(path.join(outDir, 'abc.md'), 'old');
+    writeFileSync(path.join(outDir, 'template.md'), 'old');
 
-    const result = runCli(['add-commands', 'abc', '--output', outDir], tmpDir);
+    const result = runCli(['add-commands', 'template', '--output', outDir], tmpDir);
 
     assert.notEqual(result.exitCode, 0);
     const output = result.stdout + result.stderr;
@@ -124,15 +124,15 @@ describe('add-commands command', () => {
     assert.notEqual(result.exitCode, 0);
     const output = result.stdout + result.stderr;
     assert.ok(output.includes('not found'));
-    assert.ok(output.includes('abc'));
+    assert.ok(output.includes('template'));
   });
 
   it('should copy .md to custom output directory with --output', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addcmds-'));
     const customOut = path.join(tmpDir, 'my-cmds');
-    const result = runCli(['add-commands', 'abc', '--output', customOut], tmpDir);
+    const result = runCli(['add-commands', 'template', '--output', customOut], tmpDir);
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
-    assert.ok(existsSync(path.join(customOut, 'abc.md')));
+    assert.ok(existsSync(path.join(customOut, 'template.md')));
   });
 });

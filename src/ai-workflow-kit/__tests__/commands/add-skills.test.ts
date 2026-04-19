@@ -35,7 +35,10 @@ describe('add-skills command', () => {
 
   it('should copy skill files to default output directory', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills')], tmpDir);
+    const result = runCli(
+      ['add-skills', 'template', '--output', path.join(tmpDir, 'skills')],
+      tmpDir,
+    );
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
     assert.ok(existsSync(path.join(tmpDir, 'skills', 'template', 'SKILL.md')));
@@ -44,7 +47,10 @@ describe('add-skills command', () => {
 
   it('should copy scripts/ to project root scripts/', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills')], tmpDir);
+    const result = runCli(
+      ['add-skills', 'template', '--output', path.join(tmpDir, 'skills')],
+      tmpDir,
+    );
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
     assert.ok(existsSync(path.join(tmpDir, 'scripts', 'example.sh')));
@@ -53,7 +59,10 @@ describe('add-skills command', () => {
 
   it('should print planned operations in dry-run mode without creating files', () => {
     tmpDir = mkdtempSync(path.join(os.tmpdir(), 'awkit-addskills-'));
-    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills'), '--dry-run'], tmpDir);
+    const result = runCli(
+      ['add-skills', 'template', '--output', path.join(tmpDir, 'skills'), '--dry-run'],
+      tmpDir,
+    );
 
     assert.equal(result.exitCode, 0);
     assert.ok(result.stdout.includes('Dry run'));
@@ -66,7 +75,10 @@ describe('add-skills command', () => {
     mkdirSync(destDir, { recursive: true });
     writeFileSync(path.join(destDir, 'SKILL.md'), 'old');
 
-    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills'), '--force'], tmpDir);
+    const result = runCli(
+      ['add-skills', 'template', '--output', path.join(tmpDir, 'skills'), '--force'],
+      tmpDir,
+    );
 
     assert.equal(result.exitCode, 0, `stderr: ${result.stderr}`);
     const content = readFileSync(path.join(destDir, 'SKILL.md'), 'utf8');
@@ -79,7 +91,10 @@ describe('add-skills command', () => {
     mkdirSync(destDir, { recursive: true });
     writeFileSync(path.join(destDir, 'SKILL.md'), 'old');
 
-    const result = runCli(['add-skills', 'template', '--output', path.join(tmpDir, 'skills')], tmpDir);
+    const result = runCli(
+      ['add-skills', 'template', '--output', path.join(tmpDir, 'skills')],
+      tmpDir,
+    );
 
     assert.notEqual(result.exitCode, 0);
     const output = result.stdout + result.stderr;

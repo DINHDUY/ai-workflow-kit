@@ -1,0 +1,36 @@
+# Source and test files — not needed at runtime
+src/
+tests/
+
+# TypeScript config and build artifacts
+tsconfig.json
+*.tsbuildinfo
+
+# Development configs
+eslint.config.mjs
+.prettierrc.json
+.prettierignore
+.releaserc.json
+Makefile
+
+# CI/CD
+.github/
+
+# Python bytecode compiled at development time
+__pycache__/
+*.pyc
+*.pyo
+
+# Misc
+.DS_Store
+*.log
+npm-debug.log*
+.env
+.env.*
+.temp/
+
+# Internal docs (not user-facing)
+DEPLOYMENT.md
+CONTRIBUTING.md
+docs/
+rules/
