@@ -15,7 +15,7 @@ The **`builder` workflow** is the centerpiece: it automates the creation of *new
 - **DevOps & Platform Engineers** automating domain-specific pipelines
 - **Tech Leads** creating reusable agent patterns for their organization
 
-Whether you're building web apps with the `nextjs` workflow, optimizing performance with `perf`, or creating your own custom workflows with `builder`, this kit gives you battle-tested agent systems instead of starting from scratch.
+Whether you're building web apps with the `nextjs` workflow, optimizing performance with `perf`, automating day trading strategies with `bko`/`mtr`/`pbk`, or creating your own custom workflows with `builder`, this kit gives you battle-tested agent systems instead of starting from scratch.
 
 ## Install
 
@@ -61,7 +61,11 @@ npx @dtranllc/ai-workflow-kit add-workflows <workflowName> --output .cursor/agen
 
 | Name | Description | Docs |
 |------|-------------|------|
-| **`builder`** | **Multi-agent workflow builder with pattern references** ⭐ | [README](workflows/builder/README.md) |
+| **`bko`** | **Breakout day trading — pre-market scanning, level mapping, entry confirmation, and risk management** | [README](workflows/bko/README.md) |
+| **`mtr`** | **Momentum day trading — pre-market analysis, scanner, trade monitoring, and journaling** | [README](workflows/mtr/README.md) |
+| **`pbk`** | **Pullback day trading — VWAP/EMA-based setups with entry confirmation and position sizing** | [README](workflows/pbk/README.md) |
+| **`tauri-codegen`** | **Scaffold a production Tauri v2 desktop app (frontend UI + MCP backend + Rust core)** | [README](workflows/tauri-codegen/README.md) |
+| `builder` | Multi-agent workflow builder with pattern references | [README](workflows/builder/README.md) |
 | `claude-packager` | Generate a complete, production-ready Python package wrapping agents into an Anthropic Claude SDK multi-agent application | [README](workflows/claude-packager/README.md) |
 | `maf-packager` | Generate a complete, production-ready Python package wrapping agents into a Microsoft Agent Framework (MAF) multi-agent application | [README](workflows/maf-packager/README.md) |
 | `nextjs` | Automate the conversion of UI designs into production-ready Next.js 15+ enterprise React applications | [README](workflows/nextjs/README.md) |
