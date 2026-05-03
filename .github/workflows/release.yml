@@ -24,8 +24,9 @@ jobs:
         with:
           # Fetch full history so semantic-release can determine the version
           fetch-depth: 0
-          # Use a token with write permission for pushing back the release commit
-          persist-credentials: false
+          # Use PAT to allow semantic-release to push back the release commit
+          # bypassing branch protection rules (GITHUB_TOKEN cannot do this)
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -49,4 +50,4 @@ jobs:
       - name: Release
         run: npm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
