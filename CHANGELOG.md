@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.1.0](https://github.com/DINHDUY/ai-workflow-kit/compare/v1.0.0...v1.1.0) (2026-05-03)
+
+
+### Features
+
+* add workflow_dispatch to release workflow ([43eca30](https://github.com/DINHDUY/ai-workflow-kit/commit/43eca307a58532dc06b2c294be9291cbe5488780))
+
 # 1.0.0 (2026-05-03)
 
 
