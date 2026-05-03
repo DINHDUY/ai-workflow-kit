@@ -1,6 +1,6 @@
 {
   "name": "@dtranllc/ai-workflow-kit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Scaffold AI agent assets (skills, commands, workflows) into your project",
   "type": "module",
   "engines": {
