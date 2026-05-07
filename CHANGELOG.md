@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.3.0](https://github.com/DINHDUY/ai-workflow-kit/compare/v1.2.0...v1.3.0) (2026-05-07)
+
+
+### Features
+
+* rust workflows ([e02e0f6](https://github.com/DINHDUY/ai-workflow-kit/commit/e02e0f6e11cc62b866b38dd9711644e680ed6347))
+
 # [1.2.0](https://github.com/DINHDUY/ai-workflow-kit/compare/v1.1.1...v1.2.0) (2026-05-03)
 
 
