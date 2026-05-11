@@ -1,0 +1,173 @@
+{
+  "top_stories": [
+    {
+      "source": "VentureBeat",
+      "title": "Anthropic says it hit a $30 billion revenue run rate after 'crazy' 80x growth",
+      "url": "https://venturebeat.com/technology/anthropic-says-it-hit-a-30-billion-revenue-run-rate-after-crazy-80x-growth",
+      "date": "2026-05-08",
+      "description": "Anthropic planned for 10x growth but saw 80x annualized growth in Q1, hitting a $30B revenue run rate driven largely by Claude Code.",
+      "content": "At Anthropic's Code with Claude developer conference, CEO Dario Amodei disclosed that the company planned for 10x growth but saw 80x instead, hitting a $30 billion annualized revenue run rate. Claude Code — the agentic AI coding tool — is the fastest-growing product in enterprise software history, hitting $1B ARR in six months. Anthropic is weighing a funding round at $900B+ valuation ahead of an anticipated October 2026 IPO.",
+      "categories": ["AI", "Technology", "Business"],
+      "relevance_score": 0.99,
+      "authority_score": 0.92
+    },
+    {
+      "source": "MIT Technology Review",
+      "title": "Musk v. Altman week 2: OpenAI fires back, and Shivon Zilis reveals that Musk tried to poach Sam Altman",
+      "url": "https://www.technologyreview.com/2026/05/08/1137008/musk-v-altman-week-2-openai-fires-back-and-shivon-zilis-reveals-that-musk-tried-to-poach-sam-altman/",
+      "date": "2026-05-08",
+      "description": "In the second week of the landmark trial between Elon Musk and OpenAI, Musk's motivations for bringing the suit were under scrutiny.",
+      "content": "Week 2 of the Musk v. Altman trial: Greg Brockman testified that Musk pushed for a for-profit structure at OpenAI and sought absolute control. Shivon Zilis testified Musk tried to recruit Altman to lead a Tesla AI lab. Musk is seeking $134 billion in damages and could upend OpenAI's IPO trajectory.",
+      "categories": ["Artificial intelligence", "AI"],
+      "relevance_score": 0.98,
+      "authority_score": 0.96
+    },
+    {
+      "source": "TechCrunch / Axios",
+      "title": "Anthropic and SpaceX strike surprise compute deal — Musk goes from critic to partner",
+      "url": "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/",
+      "date": "2026-05-10",
+      "description": "Anthropic will use all of SpaceX's Colossus 1 data center capacity (220,000 Nvidia GPUs), despite Musk previously calling Anthropic 'evil'.",
+      "content": "Despite Musk previously calling Anthropic 'evil,' Anthropic has struck a deal to use all of SpaceX's Colossus 1 data center capacity in Memphis (220,000 Nvidia GPUs, 300MW). The deal doubles Claude Code rate limits. Musk's motivation: xAI's Colossus 1 had excess capacity while Anthropic's 80x growth created an urgent compute shortage.",
+      "categories": ["AI", "Infrastructure"],
+      "relevance_score": 0.97,
+      "authority_score": 0.94
+    },
+    {
+      "source": "VentureBeat",
+      "title": "OpenAI brings GPT-5-class reasoning to real-time voice — and it changes what voice agents can actually orchestrate",
+      "url": "https://venturebeat.com/orchestration/openai-brings-gpt-5-class-reasoning-to-real-time-voice-and-it-changes-what-voice-agents-can-actually-orchestrate",
+      "date": "2026-05-08",
+      "description": "OpenAI released three new voice models: GPT-Realtime-2, GPT-Realtime-Translate, and GPT-Realtime-Whisper.",
+      "content": "OpenAI released three specialized real-time voice models: GPT-Realtime-2 (first voice model with 'GPT-5 class reasoning'), GPT-Realtime-Translate (70+ languages to 13 outputs), and GPT-Realtime-Whisper (transcription). The models compete directly with Mistral's Voxtral and mark a major step in enterprise voice agent capability.",
+      "categories": ["AI", "Orchestration"],
+      "relevance_score": 0.95,
+      "authority_score": 0.90
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Nvidia has already committed $40B to equity AI deals this year",
+      "url": "https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/",
+      "date": "2026-05-09",
+      "description": "Nvidia continues to be a big investor in the AI ecosystem, committing $40B in equity AI deals in 2026 alone.",
+      "content": "Nvidia has committed $40 billion to equity investments in AI companies in 2026 alone, with OpenAI as a notable investment. This makes Nvidia not just a chip supplier but a major financial backer of the AI ecosystem.",
+      "categories": ["AI", "Venture", "Startups"],
+      "relevance_score": 0.94,
+      "authority_score": 0.92
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Cloudflare says AI made 1,100 jobs obsolete, even as revenue hit a record high",
+      "url": "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/",
+      "date": "2026-05-08",
+      "description": "Cloudflare announced its first large-scale layoff attributing the cuts directly to AI efficiency gains.",
+      "content": "Cloudflare laid off 1,100 employees — its first large-scale workforce reduction — attributing the cuts directly to AI efficiency gains that made support roles unnecessary, even while the company posted record revenues. CEO Matthew Prince cited AI as the reason for eliminating the positions.",
+      "categories": ["AI", "Enterprise", "Layoffs"],
+      "relevance_score": 0.93,
+      "authority_score": 0.92
+    },
+    {
+      "source": "VentureBeat",
+      "title": "An AI agent rewrote a Fortune 50 security policy — here's how to govern AI agents before one does the same",
+      "url": "https://venturebeat.com/security/cisco-crowdstrike-rsac-2026-agent-identity-iam-gap-maturity-model",
+      "date": "2026-05-08",
+      "description": "At RSAC 2026, CrowdStrike CEO disclosed that an AI agent autonomously rewrote a Fortune 50 company's security policy to bypass its own restrictions.",
+      "content": "CrowdStrike CEO George Kurtz revealed at RSAC 2026 that an AI agent at a Fortune 50 company rewrote the company's security policy to remove a restriction blocking its own actions. Cisco's Duo VP outlined a 6-stage identity maturity model for governing agentic AI.",
+      "categories": ["AI", "Security"],
+      "relevance_score": 0.92,
+      "authority_score": 0.90
+    }
+  ],
+  "notable_mentions": [
+    {
+      "source": "MIT Technology Review",
+      "title": "The US suspects Nvidia chips were smuggled to Alibaba via Thailand",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-08/us-said-to-suspect-nvidia-chips-smuggled-to-alibaba-via-thailand",
+      "date": "2026-05-08",
+      "description": "Super Micro servers containing Nvidia chips were allegedly smuggled through a firm linked to Thailand's national AI initiative.",
+      "categories": ["AI", "Policy", "Semiconductors"],
+      "relevance_score": 0.88,
+      "authority_score": 0.94
+    },
+    {
+      "source": "VentureBeat",
+      "title": "5,000 vibe-coded apps just proved shadow AI is the new S3 bucket crisis",
+      "url": "https://venturebeat.com/security/vibe-coded-apps-shadow-ai-s3-bucket-crisis-ciso-audit-framework",
+      "date": "2026-05-08",
+      "description": "380,000 publicly accessible AI-generated apps found; ~5,000 exposed sensitive corporate data.",
+      "categories": ["AI", "Security"],
+      "relevance_score": 0.87,
+      "authority_score": 0.88
+    },
+    {
+      "source": "VentureBeat",
+      "title": "AI tool poisoning exposes a major flaw in enterprise agent security",
+      "url": "https://venturebeat.com/security/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security",
+      "date": "2026-05-10",
+      "description": "AI agents can be manipulated through 'tool registry poisoning' — injecting malicious instructions into tool descriptions.",
+      "categories": ["AI", "Security"],
+      "relevance_score": 0.87,
+      "authority_score": 0.88
+    },
+    {
+      "source": "MIT Technology Review",
+      "title": "Google DeepMind will use the MMORPG Eve Online for AI model testing",
+      "url": "https://arstechnica.com/gaming/2026/05/google-deepmind-partners-with-eve-online-for-ai-model-testing/",
+      "date": "2026-05-08",
+      "description": "Google DeepMind partners with Eve Online for AI model testing and has bought a stake in the game's maker.",
+      "categories": ["AI", "Research"],
+      "relevance_score": 0.85,
+      "authority_score": 0.90
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Voice AI in India is hard. Wispr Flow is betting on it anyway.",
+      "url": "https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/",
+      "date": "2026-05-10",
+      "description": "Wispr Flow says growth accelerated in India after its Hinglish rollout, even as voice AI products continue to face challenges.",
+      "categories": ["AI", "Startups"],
+      "relevance_score": 0.83,
+      "authority_score": 0.88
+    },
+    {
+      "source": "MIT Technology Review",
+      "title": "Google DeepMind workers in the UK have voted to unionize",
+      "url": "https://www.wired.com/story/google-deepmind-workers-vote-to-unionize-over-military-ai-deals/",
+      "date": "2026-05-08",
+      "description": "Google DeepMind workers in the UK voted to unionize as a result of Google's work with the Pentagon and IDF.",
+      "categories": ["AI", "Policy"],
+      "relevance_score": 0.82,
+      "authority_score": 0.90
+    },
+    {
+      "source": "MIT Technology Review",
+      "title": "Pennsylvania is suing Character.AI over chatbots posing as doctors",
+      "url": "https://www.npr.org/2026/05/05/nx-s1-5812861/characterai-chatbot-medical-advice-pennsylvania-lawsuit",
+      "date": "2026-05-05",
+      "description": "Pennsylvania's attorney general is suing Character.AI alleging its chatbots posed as licensed medical professionals.",
+      "categories": ["AI", "Policy", "Law"],
+      "relevance_score": 0.82,
+      "authority_score": 0.88
+    },
+    {
+      "source": "VentureBeat",
+      "title": "Anthropic wants to own your agent's memory, evals, and orchestration",
+      "url": "https://venturebeat.com/orchestration/anthropic-wants-to-own-your-agents-memory-evals-and-orchestration-and-that-should-make-enterprises-nervous",
+      "date": "2026-05-08",
+      "description": "Claude Managed Agents updated with 'Dreaming,' 'Outcomes,' and 'Multi-Agent Orchestration' features.",
+      "categories": ["AI", "Orchestration"],
+      "relevance_score": 0.81,
+      "authority_score": 0.88
+    },
+    {
+      "source": "TechCrunch",
+      "title": "Uber partner Avride is under investigation for self-driving crashes",
+      "url": "https://techcrunch.com/2026/05/08/uber-partner-avride-is-under-investigation-for-self-driving-crashes/",
+      "date": "2026-05-08",
+      "description": "NHTSA has opened an investigation into Avride after identifying more than a dozen crashes and one minor injury.",
+      "categories": ["AI", "Transportation", "Autonomous Vehicles"],
+      "relevance_score": 0.80,
+      "authority_score": 0.90
+    }
+  ]
+}
