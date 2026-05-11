@@ -12,6 +12,9 @@ test: ## Run all tests
 typecheck: ## Type-check without emitting
 	npm run typecheck
 
+formatcheck: ## Format code with Prettier
+	npm run format
+
 dev: ## Run CLI in development mode (pass ARGS, e.g. make dev ARGS="add-skills TEMPLATE --dry-run")
 	npm run dev -- $(ARGS)
 
