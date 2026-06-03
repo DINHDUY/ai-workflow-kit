@@ -17,4 +17,5 @@ Thumbs.db
 
 .claude/
 .cursor/
+.journal/
 docs/workflows/
