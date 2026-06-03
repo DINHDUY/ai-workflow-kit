@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.4.0](https://github.com/DINHDUY/ai-workflow-kit/compare/v1.3.0...v1.4.0) (2026-06-03)
+
+
+### Bug Fixes
+
+* formatting issues ([bb82a55](https://github.com/DINHDUY/ai-workflow-kit/commit/bb82a55946c9dbdaa8e14d13b11e2b48cf9293ff))
+
+
+### Features
+
+* add 4 new workflows (ai-daily-briefing, backend-for-frontend, comm-winston-star, frontend-stitch) ([f9580f7](https://github.com/DINHDUY/ai-workflow-kit/commit/f9580f7994f5d6d16b90b12694893b3056de9c8a))
+
 # [1.3.0](https://github.com/DINHDUY/ai-workflow-kit/compare/v1.2.0...v1.3.0) (2026-05-07)
 
 
